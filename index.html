@@ -41,20 +41,38 @@
         line-height: 1.6;
       }
       .cta-button {
+        display: inline-block;
         background-color: #43a047;
         color: white;
         border: none;
-        padding: 1rem 2rem;
+        padding: 0.9rem 1.5rem;
         border-radius: 8px;
         font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
         transition: background-color 0.2s ease;
+        white-space: normal;       /* Allow wrapping */
+        text-align: center;        /* Center text */
+        max-width: 100%;           /* Prevent overflow */
       }
       .cta-button:hover {
         background-color: #388e3c;
       }
+
+      /* Responsive adjustments */
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .card {
+          padding: 1.5rem;
+        }
+      }
+
     </style>
   </head>
   <body>
