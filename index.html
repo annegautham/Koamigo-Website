@@ -11,38 +11,55 @@
         margin: 0;
         padding: 0;
       }
+
       body {
         font-family: 'Inter', sans-serif;
         background-color: #e8f5e9;
         color: #1b5e20;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-        text-align: center;
+        height: 100vh;
         padding: 2rem;
       }
 
-      .card {
+      .card-wrapper {
         background-color: #ffffff;
         padding: 2rem;
         border-radius: 16px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
+        max-width: 700px;
         width: 100%;
-        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: left;
+        flex-wrap: wrap;
+      }
+
+      .image-container {
+        flex-shrink: 0;
+      }
+
+      .image-container img {
+        width: 80px;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .text-content {
+        flex: 1;
       }
 
       h1 {
         color: #2e7d32;
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
       }
 
       p {
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.05rem;
         line-height: 1.6;
       }
 
@@ -51,67 +68,50 @@
         background-color: #43a047;
         color: white;
         border: none;
-        padding: 0.9rem 1.5rem;
+        padding: 0.75rem 1.3rem;
         border-radius: 8px;
         font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
         transition: background-color 0.2s ease;
-        white-space: normal;
-        text-align: center;
-        max-width: 100%;
       }
 
       .cta-button:hover {
         background-color: #388e3c;
       }
 
-      .image-container img {
-        max-width: 180px;
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      }
-
-      @media (max-width: 500px) {
-        h1 {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-        }
-
-        .card {
-          padding: 1.5rem;
+      @media (max-width: 600px) {
+        .card-wrapper {
+          flex-direction: column;
+          text-align: center;
         }
 
         .image-container img {
-          max-width: 140px;
+          margin-bottom: 1rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>Join Koamigo</h1>
-      <p>
-        Earn more while helping clients thrive. We offer higher compensation than other platforms with complete scheduling flexibility. Our AI technology creates detailed client profiles and matches you with ideal patients based on your expertise and approach. These quality matches lead to better outcomes and stronger retention.
-      </p>
-      <a
-        class="cta-button"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd0ycN_CB5QqN7Z_PFbWnt9dGPH2tlsQ05AzYTAn5CDOEQZpg/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Click here to join our waitlist
-      </a>
-    </div>
-
-    <div class="image-container">
-      <img src="koa.png" alt="Koamigo Koala" />
+    <div class="card-wrapper">
+      <div class="image-container">
+        <img src="koa.png" alt="Koa" />
+      </div>
+      <div class="text-content">
+        <h1>Join Koamigo</h1>
+        <p>
+          Earn more while helping clients thrive. We offer higher compensation than other platforms with complete scheduling flexibility. Our AI technology creates detailed client profiles and matches you with ideal patients based on your expertise and approach. These quality matches lead to better outcomes and stronger retention.
+        </p>
+        <a
+          class="cta-button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd0ycN_CB5QqN7Z_PFbWnt9dGPH2tlsQ05AzYTAn5CDOEQZpg/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here to join our waitlist
+        </a>
+      </div>
     </div>
   </body>
 </html>
