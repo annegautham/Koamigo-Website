@@ -16,12 +16,14 @@
         background-color: #e8f5e9;
         color: #1b5e20;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
         text-align: center;
         padding: 2rem;
       }
+
       .card {
         background-color: #ffffff;
         padding: 2rem;
@@ -29,17 +31,21 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         max-width: 600px;
         width: 100%;
+        margin-bottom: 1.5rem;
       }
+
       h1 {
         color: #2e7d32;
         font-size: 2rem;
         margin-bottom: 1rem;
       }
+
       p {
         margin-bottom: 1.5rem;
         font-size: 1.1rem;
         line-height: 1.6;
       }
+
       .cta-button {
         display: inline-block;
         background-color: #43a047;
@@ -52,27 +58,40 @@
         cursor: pointer;
         text-decoration: none;
         transition: background-color 0.2s ease;
-        white-space: normal;       /* Allow wrapping */
-        text-align: center;        /* Center text */
-        max-width: 100%;           /* Prevent overflow */
+        white-space: normal;
+        text-align: center;
+        max-width: 100%;
       }
+
       .cta-button:hover {
         background-color: #388e3c;
       }
 
-      /* Responsive adjustments */
+      .image-container img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
       @media (max-width: 500px) {
         h1 {
           font-size: 1.5rem;
         }
+
         p {
           font-size: 1rem;
         }
+
         .card {
           padding: 1.5rem;
         }
-      }
 
+        .image-container img {
+          max-width: 90%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -81,7 +100,6 @@
       <p>
         Earn more while helping clients thrive. We offer higher compensation than other platforms with complete scheduling flexibility. Our AI technology creates detailed client profiles and matches you with ideal patients based on your expertise and approach. These quality matches lead to better outcomes and stronger retention.
       </p>
-
       <a
         class="cta-button"
         href="https://docs.google.com/forms/d/e/1FAIpQLSd0ycN_CB5QqN7Z_PFbWnt9dGPH2tlsQ05AzYTAn5CDOEQZpg/viewform"
@@ -90,6 +108,10 @@
       >
         Click here to join our waitlist
       </a>
+    </div>
+
+    <div class="image-container">
+      <img src="koa.png" alt="Koa Pic" />
     </div>
   </body>
 </html>
