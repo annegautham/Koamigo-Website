@@ -62,6 +62,20 @@
         font-size: 1.05rem;
         line-height: 1.6;
       }
+      .button-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          justify-content: center; /* or flex-start for desktop */
+          margin-top: 5rem;
+        }
+
+        @media (max-width: 600px) {
+          .button-group {
+            justify-content: center;
+          }
+        }
+
 
       .cta-button {
         display: inline-block;
@@ -90,6 +104,10 @@
         .image-container img {
           margin-bottom: 1rem;
         }
+
+        .button-group {
+          justify-content: center;
+        }
       }
     </style>
   </head>
@@ -103,14 +121,24 @@
         <p>
           Earn more while helping clients thrive. We offer higher compensation than other platforms with complete scheduling flexibility. Our AI technology creates detailed client profiles and matches you with ideal patients based on your expertise and approach. These quality matches lead to better outcomes and stronger retention.
         </p>
-        <a
-          class="cta-button"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd0ycN_CB5QqN7Z_PFbWnt9dGPH2tlsQ05AzYTAn5CDOEQZpg/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click here to join our waitlist
-        </a>
+        <div class="button-group">
+          <a
+            class="cta-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd0ycN_CB5QqN7Z_PFbWnt9dGPH2tlsQ05AzYTAn5CDOEQZpg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Therapy Waitlist
+          </a>
+          <a
+            class="cta-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeFKTOZBzI3nbtjXCwX4yuAwWK6e98rihU_3YjVDyhC8cupcw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            User Waitlist
+          </a>
+        </div>
       </div>
     </div>
   </body>
