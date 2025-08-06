@@ -15,24 +15,8 @@
       body {
         font-family: 'Inter', sans-serif;
         background: linear-gradient(135deg, #f0f9f0 0%, #dcefdc 100%);
-        color: #1b5e20;      <div class="faq">
-        <div class="faq-wrapper">
-          <div class="faq-item">
-            <h3>What is Koamigo?</h3>
-            <p>Koamigo is an AI-powered wellness platform that connects clients and therapists for more personalized, flexible care.</p>
-          </div>
-        </div>
-        <div class="faq-wrapper">
-          <div class="faq-item">
-            <h3>How do I join Koamigo?</h3>
-            <p>You can join our waitlist on the <a href="/">homepage</a>. We'll notify you as soon as we're ready to onboard new users.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Who can I contact for technical issues?</h3>
-            <p>Email us anytime at <a href="mailto:outreach@koamigo.com">outreach@koamigo.com</a>.</p>
-          </div>
-        </div>
-      </div>lay: flex;
+        color: #1b5e20;
+        display: flex;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
@@ -116,10 +100,11 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
         max-width: 800px;
-        width: 100%;
+        width: calc(100% - 4rem);
         animation: fadeIn 1s ease-out;
         position: relative;
         overflow: hidden;
+        margin: 0 auto;
       }
 
       .card::before {
@@ -182,19 +167,22 @@
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-      }
-
-      .faq-wrapper:first-child {
-        max-width: 600px;
-        margin: 0 auto;
         width: 100%;
       }
 
-      .faq-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .faq-row {
+        display: flex;
         gap: 2rem;
         width: 100%;
+        justify-content: center;
+      }
+
+      .faq-row:last-child {
+        justify-content: center;
+      }
+
+      .faq-row:last-child .faq-item {
+        max-width: 500px;
       }
 
       .faq-item {
@@ -209,6 +197,7 @@
         flex-direction: column;
         justify-content: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        width: 100%;
       }
 
       .faq-item:nth-child(1) { animation-delay: 0.2s; }
@@ -258,6 +247,9 @@
         background: linear-gradient(135deg, rgba(46, 125, 50, 0.05) 0%, rgba(67, 160, 71, 0.1) 100%);
         border-radius: 16px;
         border: 1px solid rgba(46, 125, 50, 0.1);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .contact strong {
@@ -283,16 +275,14 @@
       }
 
       @media (max-width: 800px) {
-        .faq-wrapper {
-          grid-template-columns: 1fr;
+        .faq-row {
+          flex-direction: column;
+          align-items: center;
           gap: 1.5rem;
         }
 
         .faq-item {
-          max-width: 500px !important;
-          width: 100%;
-          margin-left: auto;
-          margin-right: auto;
+          max-width: 500px;
           padding: 1.5rem;
         }
       }
@@ -319,8 +309,6 @@
       }
     </style>
   </head>
-
-
   <body>
     <div class="floating-shapes">
       <div class="shape"></div>
@@ -332,29 +320,32 @@
       <p>Need help? We're here for you. Below are some common questions and how to reach us.</p>
 
       <div class="faq">
-        <div class="faq-item">
-          <h3>How do I join Koamigo?</h3>
-          <p>You can join our waitlist on the <a href="/">homepage</a>. We’ll notify you as soon as we’re ready to onboard new users.</p>
+        <div class="faq-row">
+          <div class="faq-item">
+            <h3>What is Koamigo?</h3>
+            <p>Koamigo is an AI-powered wellness platform that connects clients and therapists for more personalized, flexible care.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I join Koamigo?</h3>
+            <p>You can join our waitlist on the <a href="/">homepage</a>. We'll notify you as soon as we're ready to onboard new users.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h3>Who can I contact for technical issues?</h3>
-          <p>Email us anytime at <a href="mailto:outreach@koamigo.com">outreach@koamigo.com</a>.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What is Koamigo?</h3>
-          <p>Koamigo is an AI-powered wellness platform that connects clients and therapists for more personalized, flexible care.</p>
+        <div class="faq-row">
+          <div class="faq-item">
+            <h3>Who can I contact for technical issues?</h3>
+            <p>Email us anytime at <a href="mailto:outreach@koamigo.com">outreach@koamigo.com</a>.</p>
+          </div>
         </div>
       </div>
 
       <div class="contact">
         <strong>Contact Information</strong><br/>
         Email: <a href="mailto:outreach@koamigo.com">outreach@koamigo.com</a><br/>
-        Phone: <a href="tel:+13127204317">+1 (708)-378-4875</a><br/>
+        Phone: <a href="tel:+17083784875">+1 (708)-378-4875</a><br/>
         Support Hours: Monday–Friday, 9am–6pm CT<br/>
-        Response Time: Within 24 hours on weekdays</a><br/>
+        Response Time: Within 24 hours on weekdays<br/>
         Based in San Francisco, CA
       </div>
     </div>
   </body>
 </html>
-x`
