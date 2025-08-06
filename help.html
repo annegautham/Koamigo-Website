@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Koamigo Support</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght      <div class="faq">
-        <div class="faq-item">
-          <h3>What is Koamigo?</h3>
-          <p>Koamigo is an AI-powered wellness platform that connects clients and therapists for more personalized, flexible care.</p>
-        </div>
-        <div class="faq-item">
-          <h3>How do I join Koamigo?</h3>
-          <p>You can join our waitlist on the <a href="/">homepage</a>. We'll notify you as soon as we're ready to onboard new users.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Who can I contact for technical issues?</h3>
-          <p>Email us anytime at <a href="mailto:outreach@koamigo.com">outreach@koamigo.com</a>.</p>
-        </div>
-      </div>wap" rel="stylesheet"/>
     <style>
       * {
         box-sizing: border-box;
@@ -169,29 +152,35 @@
       }
 
       .faq {
-        text-align: left;
+        text-align: center;
         margin-top: 2rem;
         position: relative;
         z-index: 1;
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
       }
 
-      .faq-item:last-child {
-        grid-column: 1 / -1;
-        max-width: 600px;
-        margin: 0 auto;
+      .faq-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        width: 100%;
       }
 
       .faq-item {
-        margin-bottom: 2rem;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.5);
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.7);
         border-radius: 16px;
         transition: all 0.3s ease;
         opacity: 0;
         animation: fadeInUp 0.5s ease-out forwards;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       }
 
       .faq-item:nth-child(1) { animation-delay: 0.2s; }
@@ -220,6 +209,7 @@
         color: #2e7d32;
         margin-bottom: 0.8rem;
         font-weight: 600;
+        text-align: center;
       }
 
       .faq-item p {
@@ -227,6 +217,7 @@
         color: #1b5e20;
         margin: 0;
         line-height: 1.6;
+        text-align: center;
       }
 
       .contact {
@@ -264,13 +255,17 @@
       }
 
       @media (max-width: 800px) {
-        .faq {
+        .faq-wrapper {
           grid-template-columns: 1fr;
-          gap: 1rem;
+          gap: 1.5rem;
         }
-        
-        .faq-item:last-child {
-          max-width: 100%;
+
+        .faq-item {
+          max-width: 500px !important;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 1.5rem;
         }
       }
 
@@ -296,6 +291,8 @@
       }
     </style>
   </head>
+
+
   <body>
     <div class="floating-shapes">
       <div class="shape"></div>
